@@ -40,32 +40,6 @@ const cron = require('node-cron');
 const app = express()
 dotenv.config()
 // app.use(cors());
-
-
-
-// const allowedOrigins = [
-//   'https://stringtetris.com',
-//   'https://stradmin.stringtetris.com',
-//   'https://stringwithdrawadmin.stringgames.io',
-//   'https://stringwithdraw.stringgames.io',
-// ];
-
-// const corsOptions = {
-//   origin: function (origin, callback) {
-//     // Allow requests with no origin (like mobile apps or curl)
-//     if (!origin) return callback(null, true);
-//     if (allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-//   credentials: true, // Allow cookies or auth headers
-//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-//   // allowedHeaders: ['Content-Type', 'Authorization'],
-//   allowedHeaders: "*",
-// };
-
 // app.use(cors(corsOptions));
 
 app.use(
@@ -81,10 +55,6 @@ app.use(
         preflightContinue: false,
       }),
     );
-  
-
-
-
  
 connectToDb()
  
